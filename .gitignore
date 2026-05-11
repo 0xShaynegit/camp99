@@ -1,6 +1,9 @@
 # Markdown files
 *.md
 
+# Claude Code local configuration
+.claude/
+
 # Raw assets and scratch directories
 _raw/
 *_raw/
