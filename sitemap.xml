@@ -2,145 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://camp99.asia/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/a-journey-to-remember.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/a-journey-to-remember.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/about.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/about.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/artography.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/artography.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/bob-on-the-go.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/bob-on-the-go.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/chiang-mai-ambassador.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/chiang-mai-ambassador.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/contact.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/contact.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/digital-mission-home.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/digital-mission-home.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/digitalmission-media.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/digitalmission-media.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/disclaimer.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/disclaimer.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/donation-confirmation.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/donor-dashboard.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/donation-failed.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/drone-images.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/donation-history.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/end-of-the-spear.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/donor-dashboard.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/faces-of-thailand.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/drone-images.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/friends-of-camp-99.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/end-of-the-spear.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/media-training-sessions.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/faces-of-thailand.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/ministry-photos.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/friends-of-camp-99.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/prayer-card-portraits.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/media-training-sessions.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/sample-video-projects.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/ministry-photos.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/tax-deductible-donations.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camp99.asia/prayer-card-portraits.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://camp99.asia/sample-video-projects.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://camp99.asia/tax-deductible-donations.html</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://camp99.asia/visit-bob.html</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://camp99.asia/pages/visit-bob.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
