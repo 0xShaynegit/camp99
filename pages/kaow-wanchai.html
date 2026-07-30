@@ -160,6 +160,11 @@ Skip to content</a>
 :root{color-scheme:light;}
 body{background:#fff !important;color:#3a3a3a;}
 #masthead{position:absolute;top:0;left:0;right:0;z-index:20;background:#fff !important;box-shadow:none !important;border-bottom:1px solid #eee !important;}
+#masthead .menu-link,#masthead .ast-menu-toggle,#masthead .menu-toggle,#masthead .main-header-bar .menu-link,#masthead .site-title a,#masthead .ast-header-navigation-arrow{color:#1f2733 !important;}
+#masthead .menu-link:hover,#masthead .current-menu-item>.menu-link,#masthead .current_page_item>.menu-link{color:#0072bc !important;}
+#masthead .sub-menu{background:#fff !important;border:1px solid #e5e5e5 !important;box-shadow:0 6px 16px rgba(0,0,0,.08) !important;}
+#masthead .sub-menu .menu-link{color:#1f2733 !important;}
+#masthead .sub-menu .menu-link:hover{color:#0072bc !important;}
 .content-area.primary{margin-top:0 !important;}
 .site-main::before,.site-main::after,.entry-content::before,.entry-content::after{content:none !important;}
 .site-main{font-size:0 !important;}
@@ -169,21 +174,23 @@ body{background:#fff !important;color:#3a3a3a;}
 .tns-article h1{font-size:34px;line-height:1.2;margin:0 0 22px;color:#1f2733;}
 .tns-article img{display:block;width:100%;height:auto;border-radius:8px;margin:0 0 28px;}
 .tns-article p{font-size:17px;line-height:1.7;color:#3f4550;margin:0 0 20px;}
+.tns-gallery{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:36px 0 8px;padding-bottom:8px;-webkit-overflow-scrolling:touch;}
+.tns-gallery img{flex:0 0 auto;width:240px;height:170px;object-fit:cover;border-radius:6px;scroll-snap-align:start;}
+.tns-gallery::-webkit-scrollbar{height:8px;}
+.tns-gallery::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:4px;}
+@media (max-width:600px){.tns-gallery img{width:200px;height:145px;}}
 @media (max-width:767px){.tns-article{padding:120px 20px 50px;}.tns-article h1{font-size:26px;}}
-.tns-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:36px 0 8px;}
-.tns-gallery img{display:block;width:100%;height:150px;object-fit:cover;border-radius:6px;margin:0;}
-@media (max-width:600px){.tns-gallery{grid-template-columns:repeat(2,1fr);}}
 </style>
 
 <div class="tns-article">
 <a class="tns-back" href="thenextstep.html">&larr; Back to The Next Step</a>
 <img src="../images/camp99asia-camp99-thenextstep-kaow.webp" alt="Kaow, a student at The Next Step" loading="lazy" width="408" height="402">
 <h1>Our New Student, Kaow!</h1>
-<p>Kaow (Wanchai), 20, joined The Next Step from the Hmong tribe, having just graduated from Payap Technology College where he studied computers.</p>
-<p>He's the second-youngest of seven children; his family can't help him financially, though an older brother sends a small amount each month. Kaow's own goal is to keep studying at university, so the house has been helping him weigh his options for continuing his education.</p>
+<p>Kaow (Wanchai) joined The Next Step ministry house at 20 years old, from the Hmong tribe. His big news was graduating from Payap Technology College, where he studied computers.</p>
 <img src="../images/camp99asia-camp99-thenextstep-kaow-rummikube.webp" alt="Kaow playing Rummikube with housemates" loading="lazy" width="960" height="710">
-<p>Around the house Kaow has settled in quickly, joining evening games and getting to know the other residents.</p>
+<p>Bob has a personal connection to the Hmong tribe, having worked with Hmong kids for several years in the Mae Chaem area, three hours west of Chiang Mai. Kaow isn't from that area himself, but the two have talked about visiting the Hmong villages together.</p>
 <img src="../images/camp99asia-camp99-thenextstep-kaow-scooter.webp" alt="Kaow at a scooter meeting" loading="lazy" width="960" height="720">
+<p>Kaow comes from a family of seven children and is the second-youngest. His parents can't afford to help him financially, though an older brother sends him about $30 a month. Kaow's own goal is to attend university to continue his education, and the house has been figuring out whether he'll need to work for a year first or whether support can be raised to help him start this August. It's surprisingly affordable, and any help is welcome.</p>
 <div class="tns-gallery">
 <img src="../images/camp99asia-camp99-thenextstep-kaow-wanchai-gallery-1.webp" alt="Kaow Wanchai photo 1" loading="lazy" width="408" height="402">
 <img src="../images/camp99asia-camp99-thenextstep-kaow-wanchai-gallery-2.webp" alt="Kaow Wanchai photo 2" loading="lazy" width="399" height="479">
@@ -195,6 +202,7 @@ body{background:#fff !important;color:#3a3a3a;}
 <img src="../images/camp99asia-camp99-thenextstep-kaow-wanchai-gallery-8.webp" alt="Kaow Wanchai photo 8" loading="lazy" width="960" height="639">
 </div>
 </div>
+</div><!-- .entry-content .clear -->
 </article><!-- #post-## -->
 </main><!-- #main -->
 </div><!-- #primary -->

@@ -160,6 +160,11 @@ Skip to content</a>
 :root{color-scheme:light;}
 body{background:#fff !important;color:#3a3a3a;}
 #masthead{position:absolute;top:0;left:0;right:0;z-index:20;background:#fff !important;box-shadow:none !important;border-bottom:1px solid #eee !important;}
+#masthead .menu-link,#masthead .ast-menu-toggle,#masthead .menu-toggle,#masthead .main-header-bar .menu-link,#masthead .site-title a,#masthead .ast-header-navigation-arrow{color:#1f2733 !important;}
+#masthead .menu-link:hover,#masthead .current-menu-item>.menu-link,#masthead .current_page_item>.menu-link{color:#0072bc !important;}
+#masthead .sub-menu{background:#fff !important;border:1px solid #e5e5e5 !important;box-shadow:0 6px 16px rgba(0,0,0,.08) !important;}
+#masthead .sub-menu .menu-link{color:#1f2733 !important;}
+#masthead .sub-menu .menu-link:hover{color:#0072bc !important;}
 .content-area.primary{margin-top:0 !important;}
 .site-main::before,.site-main::after,.entry-content::before,.entry-content::after{content:none !important;}
 .site-main{font-size:0 !important;}
@@ -169,20 +174,21 @@ body{background:#fff !important;color:#3a3a3a;}
 .tns-article h1{font-size:34px;line-height:1.2;margin:0 0 22px;color:#1f2733;}
 .tns-article img{display:block;width:100%;height:auto;border-radius:8px;margin:0 0 28px;}
 .tns-article p{font-size:17px;line-height:1.7;color:#3f4550;margin:0 0 20px;}
+.tns-gallery{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:36px 0 8px;padding-bottom:8px;-webkit-overflow-scrolling:touch;}
+.tns-gallery img{flex:0 0 auto;width:240px;height:170px;object-fit:cover;border-radius:6px;scroll-snap-align:start;}
+.tns-gallery::-webkit-scrollbar{height:8px;}
+.tns-gallery::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:4px;}
+@media (max-width:600px){.tns-gallery img{width:200px;height:145px;}}
 @media (max-width:767px){.tns-article{padding:120px 20px 50px;}.tns-article h1{font-size:26px;}}
-.tns-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:36px 0 8px;}
-.tns-gallery img{display:block;width:100%;height:150px;object-fit:cover;border-radius:6px;margin:0;}
-@media (max-width:600px){.tns-gallery{grid-template-columns:repeat(2,1fr);}}
 </style>
 
 <div class="tns-article">
 <a class="tns-back" href="thenextstep.html">&larr; Back to The Next Step</a>
 <img src="../images/camp99asia-camp99-thenextstep-petro.webp" alt="Petro, a student at The Next Step" loading="lazy" width="973" height="734">
 <h1>Petro Registered for Tech College!</h1>
-<p>Petro has lived at The Next Step since a teacher connection led him there after the dormitory he'd been staying in was shut down by the social welfare department.</p>
-<p>He lost his mother young and has spent years in children's homes, but he's built a reputation at the house for being resourceful, paying back a loan for a replacement phone in just two weeks.</p>
+<p>Petro has lived at The Next Step since October 2017. He'd been in a Lahu dormitory that was so poorly run it was eventually shut down by the social welfare department; a teacher at his school, a New Zealand friend from church, knew about The Next Step house and helped him move in. Petro's mother died when he was a toddler, and his father remarried and moved to the mountains of Burma/Myanmar, so Petro spent years in children's homes. He has an older sister, much older at 36, who lives in the same village Sorn is from, though the families didn't know each other before.</p>
 <img src="../images/camp99asia-camp99-thenextstep-petro-payap-sign.webp" alt="Petro at the Payap Technical College sign" loading="lazy" width="960" height="720">
-<p>Petro is now registered at Payap Technical College to study electronics, continuing his own next step toward a trade and independence.</p>
+<p>Like all the guys, Petro had a phone, but his got smashed on the road, so the house helped him buy a nice mid-level replacement. During summer break he worked hard on a neighborhood house-construction project and paid back what he'd borrowed for the phone in just two weeks, which impressed everyone. Petro went on to register at the Payap Technical College to study electronics, picking up his uniforms and books shortly after.</p>
 <img src="../images/camp99asia-camp99-thenextstep-petro-register.webp" alt="Petro registering for classes" loading="lazy" width="960" height="720">
 <div class="tns-gallery">
 <img src="../images/camp99asia-camp99-thenextstep-petro-gallery-1.webp" alt="Petro photo 1" loading="lazy" width="973" height="734">
@@ -197,6 +203,7 @@ body{background:#fff !important;color:#3a3a3a;}
 <img src="../images/camp99asia-camp99-thenextstep-petro-gallery-10.webp" alt="Petro photo 10" loading="lazy" width="1080" height="831">
 </div>
 </div>
+</div><!-- .entry-content .clear -->
 </article><!-- #post-## -->
 </main><!-- #main -->
 </div><!-- #primary -->

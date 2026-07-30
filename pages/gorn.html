@@ -160,6 +160,11 @@ Skip to content</a>
 :root{color-scheme:light;}
 body{background:#fff !important;color:#3a3a3a;}
 #masthead{position:absolute;top:0;left:0;right:0;z-index:20;background:#fff !important;box-shadow:none !important;border-bottom:1px solid #eee !important;}
+#masthead .menu-link,#masthead .ast-menu-toggle,#masthead .menu-toggle,#masthead .main-header-bar .menu-link,#masthead .site-title a,#masthead .ast-header-navigation-arrow{color:#1f2733 !important;}
+#masthead .menu-link:hover,#masthead .current-menu-item>.menu-link,#masthead .current_page_item>.menu-link{color:#0072bc !important;}
+#masthead .sub-menu{background:#fff !important;border:1px solid #e5e5e5 !important;box-shadow:0 6px 16px rgba(0,0,0,.08) !important;}
+#masthead .sub-menu .menu-link{color:#1f2733 !important;}
+#masthead .sub-menu .menu-link:hover{color:#0072bc !important;}
 .content-area.primary{margin-top:0 !important;}
 .site-main::before,.site-main::after,.entry-content::before,.entry-content::after{content:none !important;}
 .site-main{font-size:0 !important;}
@@ -169,20 +174,22 @@ body{background:#fff !important;color:#3a3a3a;}
 .tns-article h1{font-size:34px;line-height:1.2;margin:0 0 22px;color:#1f2733;}
 .tns-article img{display:block;width:100%;height:auto;border-radius:8px;margin:0 0 28px;}
 .tns-article p{font-size:17px;line-height:1.7;color:#3f4550;margin:0 0 20px;}
+.tns-gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:110px;gap:10px;margin:36px 0 8px;}
+.tns-gallery img{display:block;width:100%;height:100%;object-fit:cover;border-radius:6px;margin:0;}
+.tns-gallery img:nth-child(1){grid-column:span 2;grid-row:span 2;}
+.tns-gallery img:nth-child(6){grid-column:span 2;grid-row:span 2;}
+.tns-gallery img:nth-child(4){grid-row:span 2;}
+@media (max-width:700px){.tns-gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}.tns-gallery img:nth-child(1),.tns-gallery img:nth-child(6){grid-column:span 2;grid-row:span 1;}.tns-gallery img:nth-child(4){grid-row:span 1;}}
 @media (max-width:767px){.tns-article{padding:120px 20px 50px;}.tns-article h1{font-size:26px;}}
-.tns-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:36px 0 8px;}
-.tns-gallery img{display:block;width:100%;height:150px;object-fit:cover;border-radius:6px;margin:0;}
-@media (max-width:600px){.tns-gallery{grid-template-columns:repeat(2,1fr);}}
 </style>
 
 <div class="tns-article">
 <a class="tns-back" href="thenextstep.html">&larr; Back to The Next Step</a>
 <img src="../images/camp99asia-camp99-thenextstep-gorn.webp" alt="Gorn, a student at The Next Step" loading="lazy" width="318" height="397">
 <h1>Gorn Finished Year One at Payap!</h1>
-<p>Gorn, 18, of the Lahu tribe, has just finished his first year in the Mechanics program at the technical-school branch of Payap University, a Christian school in Chiang Mai.</p>
-<p>He's an enthusiastic, hard-working young man who spent last summer break earning enough to buy his own motorbike. He's also a keen (if unconventional) basketball player on the hoop at the house.</p>
+<p>Gorn, 18, is of the Lahu tribe (the same tribe as Night, who is now working in Korea). He recently finished his first year in the Mechanics program at the technical-school branch of Payap University, a Christian-based school in Chiang Mai. Gorn is an enthusiastic young man who loves football and soccer, and is a hard worker: he put in long hours last summer holiday and saved up enough to buy a nifty new motorbike, a retro-classic 150cc model perfect for getting around the city.</p>
 <img src="../images/camp99asia-camp99-thenextstep-gorn-house.webp" alt="Gorn at the ministry house" loading="lazy" width="1313" height="1153">
-<p>Between semesters Gorn helps out with farm work alongside his parents before heading back to Payap for another term.</p>
+<p>Another trait of Gorn's is his love of shooting baskets on the house hoop, even if his unconventional two-handed form makes for some laughs while everyone tries to help him fix it. During the current summer holiday, Gorn has been helping his parents with farm work weeding around the coffee plants, with a short break for the Songkran water festival before heading back to the fields and, eventually, back to school.</p>
 <div class="tns-gallery">
 <img src="../images/camp99asia-camp99-thenextstep-gorn-gallery-1.webp" alt="Gorn photo 1" loading="lazy" width="318" height="397">
 <img src="../images/camp99asia-camp99-thenextstep-gorn-gallery-2.webp" alt="Gorn photo 2" loading="lazy" width="913" height="762">
@@ -196,6 +203,7 @@ body{background:#fff !important;color:#3a3a3a;}
 <img src="../images/camp99asia-camp99-thenextstep-gorn-gallery-10.webp" alt="Gorn photo 10" loading="lazy" width="1147" height="801">
 </div>
 </div>
+</div><!-- .entry-content .clear -->
 </article><!-- #post-## -->
 </main><!-- #main -->
 </div><!-- #primary -->

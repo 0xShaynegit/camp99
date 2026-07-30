@@ -160,6 +160,11 @@ Skip to content</a>
 :root{color-scheme:light;}
 body{background:#fff !important;color:#3a3a3a;}
 #masthead{position:absolute;top:0;left:0;right:0;z-index:20;background:#fff !important;box-shadow:none !important;border-bottom:1px solid #eee !important;}
+#masthead .menu-link,#masthead .ast-menu-toggle,#masthead .menu-toggle,#masthead .main-header-bar .menu-link,#masthead .site-title a,#masthead .ast-header-navigation-arrow{color:#1f2733 !important;}
+#masthead .menu-link:hover,#masthead .current-menu-item>.menu-link,#masthead .current_page_item>.menu-link{color:#0072bc !important;}
+#masthead .sub-menu{background:#fff !important;border:1px solid #e5e5e5 !important;box-shadow:0 6px 16px rgba(0,0,0,.08) !important;}
+#masthead .sub-menu .menu-link{color:#1f2733 !important;}
+#masthead .sub-menu .menu-link:hover{color:#0072bc !important;}
 .content-area.primary{margin-top:0 !important;}
 .site-main::before,.site-main::after,.entry-content::before,.entry-content::after{content:none !important;}
 .site-main{font-size:0 !important;}
@@ -169,20 +174,22 @@ body{background:#fff !important;color:#3a3a3a;}
 .tns-article h1{font-size:34px;line-height:1.2;margin:0 0 22px;color:#1f2733;}
 .tns-article img{display:block;width:100%;height:auto;border-radius:8px;margin:0 0 28px;}
 .tns-article p{font-size:17px;line-height:1.7;color:#3f4550;margin:0 0 20px;}
+.tns-gallery{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:36px 0 8px;padding-bottom:8px;-webkit-overflow-scrolling:touch;}
+.tns-gallery img{flex:0 0 auto;width:240px;height:170px;object-fit:cover;border-radius:6px;scroll-snap-align:start;}
+.tns-gallery::-webkit-scrollbar{height:8px;}
+.tns-gallery::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:4px;}
+@media (max-width:600px){.tns-gallery img{width:200px;height:145px;}}
 @media (max-width:767px){.tns-article{padding:120px 20px 50px;}.tns-article h1{font-size:26px;}}
-.tns-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:36px 0 8px;}
-.tns-gallery img{display:block;width:100%;height:150px;object-fit:cover;border-radius:6px;margin:0;}
-@media (max-width:600px){.tns-gallery{grid-template-columns:repeat(2,1fr);}}
 </style>
 
 <div class="tns-article">
 <a class="tns-back" href="thenextstep.html">&larr; Back to The Next Step</a>
 <img src="../images/camp99asia-camp99-thenextstep-sorn.webp" alt="Sorn, a student at The Next Step" loading="lazy" width="387" height="484">
 <h1>Sorn Is Doing Freelance Video</h1>
-<p>Sorn, 25, of the Lahu tribe, was The Next Step's longest-staying resident, living at the house for over four years through his Bachelor's degree in Mechanical Technology at North Chiang Mai University.</p>
-<p>Alongside his studies, Sorn built skills as a lead singer and songwriter, and has since moved into freelance video work for a music studio and a Lahu Bible school.</p>
+<p>Sorn, 25, of the Lahu tribe, was The Next Step's longest-staying resident, living at the house for over four years through his whole education at North Chiang Mai University. He recently finished his Bachelor's degree in Mechanical Technology, capped off with a graduation ceremony in November.</p>
 <img src="../images/camp99asia-camp99-thenextstep-sorn-graduation.webp" alt="Sorn's university graduation" loading="lazy" width="2683" height="1789">
-<p>Sorn has since married and moved with his wife to work abroad, staying connected to the ministry house community he grew up in.</p>
+<p>Alongside his studies, Sorn built a second life as a musician: he's the lead singer in a band, writes his own songs, and has picked up video production skills along the way. He's since gone freelance with his video work, taking on projects for a music studio and a Lahu Bible school.</p>
+<p>The biggest recent news is that Sorn has gotten married, to a Christian Akha woman named Meeu, and the two of them have moved to Korea for work, currently at a strawberry farm. Like Night and his brother Ley before them, they've gone abroad to earn roughly four times what the same work would pay in Thailand.</p>
 <div class="tns-gallery">
 <img src="../images/camp99asia-camp99-thenextstep-sorn-gallery-1.webp" alt="Sorn photo 1" loading="lazy" width="387" height="484">
 <img src="../images/camp99asia-camp99-thenextstep-sorn-gallery-2.webp" alt="Sorn photo 2" loading="lazy" width="1999" height="1824">
@@ -196,6 +203,7 @@ body{background:#fff !important;color:#3a3a3a;}
 <img src="../images/camp99asia-camp99-thenextstep-sorn-gallery-10.webp" alt="Sorn photo 10" loading="lazy" width="950" height="1229">
 </div>
 </div>
+</div><!-- .entry-content .clear -->
 </article><!-- #post-## -->
 </main><!-- #main -->
 </div><!-- #primary -->
