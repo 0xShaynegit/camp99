@@ -155,8 +155,7 @@ Skip to content</a>
 <article class="post-needs-list page type-page status-publish ast-article-single" id="post-needs-list" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
 <header class="entry-header ast-no-title ast-header-without-markup">
 </header> <!-- .entry-header -->
-<div class="entry-content clear" itemprop="text">
-<style>
+<div class="entry-content clear" itemprop="text"><style>
 :root{color-scheme:light;}
 body{background:#fff !important;color:#3a3a3a;}
 #masthead{position:absolute;top:0;left:0;right:0;z-index:20;background:#fff !important;box-shadow:none !important;border-bottom:1px solid #eee !important;}
@@ -173,17 +172,25 @@ body{background:#fff !important;color:#3a3a3a;}
 .tns-back:hover{text-decoration:underline;}
 .tns-article h1{font-size:34px;line-height:1.2;margin:0 0 22px;color:#1f2733;}
 .tns-article img{display:block;width:100%;height:auto;border-radius:8px;margin:0 0 28px;}
+.tns-article img.tns-hero-img-landscape{max-width:80%;margin-left:auto;margin-right:auto;}
+.tns-article img.tns-hero-img-portrait{max-width:500px;margin-left:auto;margin-right:auto;}
 .tns-article p{font-size:17px;line-height:1.7;color:#3f4550;margin:0 0 20px;}
 .tns-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:36px 0 8px;}
 .tns-gallery img{display:block;width:100%;height:150px;object-fit:cover;border-radius:6px;margin:0;}
 @media (max-width:600px){.tns-gallery{grid-template-columns:repeat(2,1fr);}}
+.tns-gallery img{cursor:zoom-in;}
+.tns-lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(10,12,16,.92);align-items:center;justify-content:center;padding:30px;}
+.tns-lightbox.is-open{display:flex;}
+.tns-lightbox img{max-width:100%;max-height:100%;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5);}
+.tns-lightbox-close{position:absolute;top:20px;right:26px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;border:0;font-size:24px;line-height:44px;cursor:pointer;}
+.tns-lightbox-close:hover{background:rgba(255,255,255,.22);}
 @media (max-width:767px){.tns-article{padding:120px 20px 50px;}.tns-article h1{font-size:26px;}}
 </style>
 
 <div class="tns-article">
-<a class="tns-back" href="thenextstep.html">&larr; Back to The Next Step</a>
-<img src="../images/camp99asia-camp99-thenextstep-needs-list.webp" alt="Ongoing needs at The Next Step" loading="lazy" width="1440" height="1080">
 <h1>Needs List, Not in Budget</h1>
+<a class="tns-back" href="thenextstep.html">&larr; Back to The Next Step</a>
+<img class="tns-hero-img-landscape" src="../images/camp99asia-camp99-thenextstep-needs-list.webp" alt="Ongoing needs at The Next Step" loading="lazy" width="1440" height="1080">
 <p>Running The Next Step ministry house comes with a running list of costs that sit outside its regular monthly budget. A recent truck repair came in under budget and was paid off in full, and neither Petro nor Kaow had a motorbike to get around, so the house bought a used scooter for $375, a cost still looking for a sponsor.</p>
 <p>Kaow is hoping to start university this year after finishing a two-year degree, and getting him there needs roughly $400 in sponsorship that isn't covered by the regular Next Step budget. Recurring costs are adding up too: truck insurance comes due soon at about $300 for the year, and a full physical exam with the usual round of blood tests runs a similar amount.</p>
 <img src="../images/camp99asia-camp99-thenextstep-needs-scooter.webp" alt="Scooter used by residents of the ministry house" loading="lazy" width="960" height="720">
@@ -198,7 +205,28 @@ body{background:#fff !important;color:#3a3a3a;}
 <img src="../images/camp99asia-camp99-thenextstep-needs-list-gallery-6.webp" alt="Needs List photo 6" loading="lazy" width="399" height="479">
 </div>
 </div>
-</div><!-- .entry-content .clear -->
+<div class="tns-lightbox" id="tnsLightbox">
+<button class="tns-lightbox-close" type="button" aria-label="Close">&times;</button>
+<img src="" alt="">
+</div>
+<script>
+(function(){
+var lb=document.getElementById('tnsLightbox');
+var lbImg=lb.querySelector('img');
+var closeBtn=lb.querySelector('.tns-lightbox-close');
+document.querySelectorAll('.tns-gallery img').forEach(function(img){
+img.addEventListener('click',function(){
+lbImg.src=img.src;
+lbImg.alt=img.alt;
+lb.classList.add('is-open');
+});
+});
+function close(){lb.classList.remove('is-open');lbImg.src='';}
+closeBtn.addEventListener('click',close);
+lb.addEventListener('click',function(e){if(e.target===lb){close();}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){close();}});
+})();
+</script>
 </article><!-- #post-## -->
 </main><!-- #main -->
 </div><!-- #primary -->
