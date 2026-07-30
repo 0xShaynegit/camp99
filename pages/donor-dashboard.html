@@ -288,6 +288,18 @@ var WP_Statistics_Tracker_Object = {"requestUrl":"https://camp99.asia/wp-json/wp
 /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 </script>
 <script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"592abb3e249f43a2bbd321d405f5716e","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+<script id="tns-mobile-dropdown-tap">
+document.addEventListener('click', function(e){
+if(!document.body.classList.contains('ast-header-break-point')) return;
+var link = e.target.closest('#masthead .menu-item-has-children > a.menu-link');
+if(!link) return;
+var btn = link.nextElementSibling;
+if(btn && btn.classList.contains('ast-menu-toggle')){
+e.preventDefault();
+btn.click();
+}
+});
+</script>
 </body></html>
 
 
