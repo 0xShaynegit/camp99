@@ -53,8 +53,25 @@ function initNav() {
   });
 }
 
+function initCarousel() {
+  var track = document.querySelector('.carousel__track');
+  if (!track) return;
+  var prev = document.querySelector('.carousel__btn--prev');
+  var next = document.querySelector('.carousel__btn--next');
+  var scrollAmount = function () {
+    var item = track.querySelector('.carousel__item');
+    return item ? item.getBoundingClientRect().width + 12 : 300;
+  };
+  prev.addEventListener('click', function () {
+    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+  next.addEventListener('click', function () {
+    track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   initNav();
-  // carousel and scroll-to-top modules attach themselves here
-  // (added in Tasks 5 and 7)
+  initCarousel();
+  // scroll-to-top module attaches itself here (added in Task 7)
 });

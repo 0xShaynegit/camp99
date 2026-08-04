@@ -260,7 +260,74 @@ background-image: none !important;
     </article>
   </div>
 </section>
-<!-- CAROUSEL/COME-ON-OUT placeholder: Task 5 -->
+<section class="carousel-section">
+  <img class="carousel-section__bg" src="./images/camp99asia-camp99-asia-facility-233.webp"
+       width="1280" height="831" loading="lazy" alt="">
+  <div class="container carousel-section__inner">
+    <span class="section-marker">/ 03</span>
+    <h2>COME ON OUT!</h2>
+
+    <div class="carousel" role="region" aria-label="Camp 99 photo gallery">
+      <button class="carousel__btn carousel__btn--prev" aria-label="Previous image">&#8249;</button>
+      <div class="carousel__track">
+        <img class="carousel__item" src="./images/camp99asia-camp99-asia-facility-210.webp"
+             srcset="./images/camp99asia-camp99-asia-facility-210.webp 1024w,
+                     ./images/camp99asia-camp99-asia-facility-210-300w.webp 300w,
+                     ./images/camp99asia-camp99-asia-facility-210-768w.webp 768w"
+             sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="576"
+             loading="lazy" alt="Camp 99 asia camp99asia">
+        <img class="carousel__item" src="./images/camp99asia-camp99-asia-facility-202.webp"
+             srcset="./images/camp99asia-camp99-asia-facility-202.webp 883w,
+                     ./images/camp99asia-camp99-asia-facility-202-300w.webp 300w,
+                     ./images/camp99asia-camp99-asia-facility-202-768w.webp 768w"
+             sizes="(max-width: 883px) 100vw, 883px" width="883" height="1024"
+             loading="lazy" alt="Camp 99 asia camp99asia">
+        <img class="carousel__item" src="./images/camp99asia-camp99-asia-facility-225.webp"
+             srcset="./images/camp99asia-camp99-asia-facility-225.webp 960w,
+                     ./images/camp99asia-camp99-asia-facility-225-300w.webp 300w,
+                     ./images/camp99asia-camp99-asia-facility-225-768w.webp 768w"
+             sizes="(max-width: 960px) 100vw, 960px" width="960" height="631"
+             loading="lazy" alt="Camp 99 asia camp99asia">
+        <img class="carousel__item" src="./images/camp99asia-camp99-asia-facility-228.webp"
+             srcset="./images/camp99asia-camp99-asia-facility-228.webp 960w,
+                     ./images/camp99asia-camp99-asia-facility-228-300w.webp 300w,
+                     ./images/camp99asia-camp99-asia-facility-228-768w.webp 768w"
+             sizes="(max-width: 960px) 100vw, 960px" width="960" height="753"
+             loading="lazy" alt="Camp 99 asia camp99asia">
+        <img class="carousel__item" src="./images/camp99asia-camp99-asia-facility-230.webp"
+             srcset="./images/camp99asia-camp99-asia-facility-230.webp 960w,
+                     ./images/camp99asia-camp99-asia-facility-230-300w.webp 300w,
+                     ./images/camp99asia-camp99-asia-facility-230-768w.webp 768w"
+             sizes="(max-width: 960px) 100vw, 960px" width="960" height="540"
+             loading="lazy" alt="Camp 99 asia camp99asia">
+        <img class="carousel__item" src="./images/camp99asia-camp99-asia-facility-232.webp"
+             srcset="./images/camp99asia-camp99-asia-facility-232.webp 1024w,
+                     ./images/camp99asia-camp99-asia-facility-232-300w.webp 300w,
+                     ./images/camp99asia-camp99-asia-facility-232-768w.webp 768w"
+             sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="581"
+             loading="lazy" alt="Camp 99 asia camp99asia">
+        <img class="carousel__item" src="./images/camp99asia-camp99-asia-gallery-223.webp"
+             srcset="./images/camp99asia-camp99-asia-gallery-223.webp 768w,
+                     ./images/camp99asia-camp99-asia-gallery-223-300w.webp 300w"
+             sizes="(max-width: 768px) 100vw, 768px" width="768" height="432"
+             loading="lazy" alt="Camp 99 asia camp99asia">
+      </div>
+      <button class="carousel__btn carousel__btn--next" aria-label="Next image">&#8250;</button>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe class="video-wrapper__frame"
+              src="https://www.youtube.com/embed/elESI9qKq84?rel=0&amp;playsinline=0&amp;cc_load_policy=0&amp;autoplay=0"
+              title="Waiting for you, at Camp 99"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+    </div>
+
+    <h3 class="carousel-section__blurb">We're just 8km from the Super Highway</h3>
+  </div>
+</section>
 <!-- LOCATION placeholder: Task 6 -->
 </main>
 <!-- FOOTER placeholder: Task 7 -->
