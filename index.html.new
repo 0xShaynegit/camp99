@@ -137,7 +137,65 @@ background-image: none !important;
 <link rel="stylesheet" href="./styles/main.css"/>
 </head>
 <body>
-<!-- HEADER placeholder: Task 2 -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="site-logo">
+      <img src="./images/camp99asia-camp99-asia-logo.webp"
+           srcset="./images/camp99asia-camp99-asia-logo.webp 300w, ./images/camp99asia-camp99-asia-logo.webp 450w"
+           sizes="(max-width: 300px) 100vw, 300px"
+           width="300" height="100" alt="Camp 99">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Site Navigation">
+      <ul class="site-nav__list">
+        <li><a href="/pages/friends-of-camp-99.html">Friends of Camp 99</a></li>
+        <li class="has-children">
+          <a href="/pages/digitalmission-media.html">DigitalMission Media</a>
+          <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle submenu">
+            <svg class="nav-caret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <li class="has-children">
+              <a href="/pages/ministry-photos.html">Still Photography</a>
+              <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle submenu">
+                <svg class="nav-caret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+                  <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                </svg>
+              </button>
+              <ul class="sub-menu">
+                <li><a href="/pages/media-training-sessions.html">Media Training Sessions</a></li>
+                <li><a href="/pages/prayer-card-portraits.html">Prayer Card Portraits</a></li>
+                <li><a href="/pages/faces-of-thailand.html">Faces of Thailand</a></li>
+                <li><a href="/pages/drone-images.html">Drone Images</a></li>
+                <li><a href="/pages/bob-on-the-go.html">Bob on the go</a></li>
+              </ul>
+            </li>
+            <li><a href="/pages/sample-video-projects.html">Sample Video Projects</a></li>
+            <li><a href="/pages/a-journey-to-remember.html">A Journey to Remember</a></li>
+            <li><a href="/pages/end-of-the-spear.html">End of the Spear</a></li>
+          </ul>
+        </li>
+        <li class="has-children">
+          <a href="/pages/visit-bob.html">Visit Thailand</a>
+          <button class="submenu-toggle" aria-expanded="false" aria-label="Toggle submenu">
+            <svg class="nav-caret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <li><a href="/pages/chiang-mai-ambassador.html">Chiang Mai Ambassador</a></li>
+            <li><a href="/pages/visit-bob.html">Visit Bob</a></li>
+            <li><a href="/pages/thenextstep.html">The Next Step</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 <main>
 <!-- HERO placeholder: Task 3 -->
 <!-- ABOUT placeholder: Task 4 -->
