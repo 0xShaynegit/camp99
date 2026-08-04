@@ -1,0 +1,61 @@
+/* Camp 99 — hand-authored stylesheet, replaces Elementor/Astra CSS chain */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+:root {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-accent: #c580c9;
+  --color-accent-hover: #59d600;
+  --color-cta: #dd3333;
+  --font-heading: 'Open Sans Condensed', sans-serif;
+  --font-display: 'Racing Sans One', sans-serif;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 544px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1180px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 { font-size: 86px; font-weight: 900; font-family: var(--font-display); line-height: 1.4em; }
+h2 { font-size: 84px; line-height: 1.3em; }
+h3 { font-size: 28px; line-height: 1.3em; }
+
+a { color: var(--color-accent); }
+a:hover, a:focus { color: var(--color-accent-hover); }
+
+.container {
+  max-width: var(--breakpoint-xl);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 70px; }
+  h2 { font-size: 68px; }
+  h3 { font-size: 25px; }
+}
+
+@media (max-width: 544px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 39px; }
+  h3 { font-size: 20px; }
+}
