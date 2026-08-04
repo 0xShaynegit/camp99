@@ -1,5 +1,15 @@
 // Camp 99 — vanilla JS, replaces jQuery/jQuery UI/Swiper
 
+function initStickyHeader() {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  function update() {
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
 function initNav() {
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
@@ -83,6 +93,7 @@ function initScrollToTop() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  initStickyHeader();
   initNav();
   initCarousel();
   initScrollToTop();
