@@ -1,5 +1,20 @@
 # camp99.asia PageSpeed issues
 
+## Round 5 — 2026-08-04 1:31 PM report (CLS regressed to 0.066) — FIXED (commit pending)
+Self-inflicted regression from round 2's render-blocking-CSS fix: `post-249_b187d0.css` contains
+`.elementor-element-ef67603 img{width:70%}`, the rule that sizes the facility-212 hero image. Making
+that stylesheet load via preload+swap meant the image now painted at full width first, then snapped
+to 70% once the CSS applied — a 0.054 layout shift (the bulk of the 0.066 total). Reverted just this
+one stylesheet back to a normal blocking `<link>` — it's only 4.5KB and page-specific, so the
+render-blocking cost is negligible next to the CLS it was causing. Left the other 4 shared stylesheets
+on preload+swap since none of them size above-the-fold elements the same way.
+
+Also present in this report but not touched: two long main-thread tasks from GTM (upstream, already
+deferred to `window.load`, can't reduce further) and ~0.008+0.004 CLS from three web fonts swapping
+in (Open Sans Condensed, Font Awesome, RacingSansOne) — small enough to leave alone given the
+functional cost of `font-display:optional` (icons/headline font may not render at all on slow
+connections).
+
 ## Round 4 — 2026-08-04, Best Practices 96 — FIXED (commit pending)
 - Console error: `wp-json/wp-statistics/v2/hit` 403 — dead WP Statistics tracker calling a REST endpoint that doesn't exist on this static export. Removed the tracker script and its config block entirely; GA/GTM already cover real analytics.
 - Console error: `/cdn-cgi/rum` 404 — Cloudflare's own auto-injected RUM beacon, not present in this repo's HTML. Out of our control; a Cloudflare zone-level setting, not app code.
