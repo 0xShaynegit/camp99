@@ -1,5 +1,19 @@
 # camp99.asia PageSpeed issues
 
+## Round 6 — 2026-08-04 2:04 PM report was stale (PSI cache, not Cloudflare) — real gap fixed anyway
+The 2:04 PM report still showed h5/h6 headings and the WP Statistics tracker — both were already fixed
+and confirmed live via direct curl with a cache-busting query string. This is PageSpeed Insights' own
+server-side report cache, not Cloudflare's edge cache; Cloudflare purges can't touch it. To get a
+genuinely fresh read, add a throwaway query string when testing (`https://camp99.asia/?t=1`) or use
+Lighthouse directly instead of the PSI web UI.
+
+While verifying, found one real leftover: `facility-230.webp` still had the fake duplicate-file
+`srcset` pattern from round 3 (only recompressed, never given real 300w/768w variants). Also swept the
+rest of the page for the same pattern and found four more: `gallery-223`, `facility-228`,
+`facility-206`, `facility-232` — all had `srcset` entries pointing at the same file for every width.
+Generated real variants and fixed all five. Left `camp99asia-camp99-asia-logo.webp`'s duplicate srcset
+alone — it's a 5KB file, not worth a variant.
+
 ## Round 5 — 2026-08-04 1:31 PM report (CLS regressed to 0.066) — FIXED (commit pending)
 Self-inflicted regression from round 2's render-blocking-CSS fix: `post-249_b187d0.css` contains
 `.elementor-element-ef67603 img{width:70%}`, the rule that sizes the facility-212 hero image. Making
