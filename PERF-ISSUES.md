@@ -1,5 +1,10 @@
 # camp99.asia PageSpeed issues
 
+## Round 4 — 2026-08-04, Best Practices 96 — FIXED (commit pending)
+- Console error: `wp-json/wp-statistics/v2/hit` 403 — dead WP Statistics tracker calling a REST endpoint that doesn't exist on this static export. Removed the tracker script and its config block entirely; GA/GTM already cover real analytics.
+- Console error: `/cdn-cgi/rum` 404 — Cloudflare's own auto-injected RUM beacon, not present in this repo's HTML. Out of our control; a Cloudflare zone-level setting, not app code.
+- Trust and Safety (unscored, but addressed): added `Content-Security-Policy`, `Cross-Origin-Opener-Policy: same-origin`, and `Strict-Transport-Security ... preload` to `_headers`. CSP still uses `'unsafe-inline'` for script-src/style-src because this exported page has dozens of inline `<script>`/`<style>` blocks with no nonce infrastructure — tightening further would need refactoring every inline block, out of scope here. This also means the "Trusted Types" finding stays open: `require-trusted-types-for 'script'` needs every DOM-sink write (innerHTML, etc.) audited across third-party libs (jQuery UI, Swiper) first, or it will silently break them.
+
 ## Round 1 — 2026-08-04 11:16 AM report (mobile score 64) — FIXED (commit bc7c653)
 - Render-blocking CSS (common-head.css, vf6z_1b1df8.css, post-249_b187d0.css, vf6z_066dfd.css, fonts.css) — converted to preload+swap.
 - Oversized/uncompressed hero images (facility-212, facility-250, hero-lakeside-view) — recompressed, added responsive srcset for facility-212.
