@@ -84,9 +84,35 @@ function initScrollToTop() {
   var btn = document.querySelector('.scroll-to-top');
   if (!btn) return;
   btn.hidden = false;
+
+  function updateContrast() {
+    var prevVisibility = btn.style.visibility;
+    btn.style.visibility = 'hidden';
+    var x = window.innerWidth - 24 - 22;
+    var y = window.innerHeight - 24 - 22;
+    var el = document.elementFromPoint(x, y);
+    btn.style.visibility = prevVisibility;
+
+    var bg = 'rgba(0, 0, 0, 0)';
+    while (el) {
+      var c = getComputedStyle(el).backgroundColor;
+      if (c && c !== 'rgba(0, 0, 0, 0)' && c !== 'transparent') { bg = c; break; }
+      el = el.parentElement;
+    }
+    var m = bg.match(/\d+(\.\d+)?/g);
+    if (m && m.length >= 3) {
+      var luminance = (0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2]);
+      btn.classList.toggle('scroll-to-top--on-light', luminance > 150);
+    }
+  }
+
   window.addEventListener('scroll', function () {
     btn.classList.toggle('is-visible', window.scrollY > 400);
+    updateContrast();
   }, { passive: true });
+  window.addEventListener('resize', updateContrast, { passive: true });
+  updateContrast();
+
   btn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });

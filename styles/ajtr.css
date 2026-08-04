@@ -1,0 +1,97 @@
+/* A Journey to Remember — page-specific styling, not shared with the rest of the site */
+
+.page-hero--full { min-height: 100vh; align-items: center; }
+.page-hero--ajtr { text-align: center; }
+.page-hero--ajtr .page-hero__content { max-width: 1120px; margin: 0 auto; }
+.page-hero--ajtr .page-hero__rule { display: none; }
+
+.page-hero--ajtr h1 {
+  font-family: 'Autour One', sans-serif;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 1;
+  color: #fff;
+}
+
+.site-nav__list a { color: #fff; }
+
+.page-hero__flower {
+  display: block;
+  width: 60px;
+  height: auto;
+  margin: 24px auto;
+}
+
+.page-hero__panel {
+  display: inline-block;
+  background: rgba(179, 165, 165, 0.56);
+  padding: 16px 20px;
+  text-align: left;
+}
+.page-hero__subtitle {
+  font-family: 'Autour One', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.35;
+  color: #000;
+  margin: 0;
+}
+.page-hero__byline {
+  font-family: 'Autour One', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  text-align: right;
+  text-transform: capitalize;
+  margin: 8px 0 0;
+}
+
+@media (max-width: 1024px) { .page-hero--ajtr h1 { font-size: 64px; } }
+@media (max-width: 768px) {
+  .page-hero--ajtr h1 { font-size: 44px; }
+  .page-hero__panel { text-align: center; }
+  .page-hero__byline { text-align: center; }
+  .page-hero__subtitle { font-size: 20px; }
+}
+@media (max-width: 544px) { .page-hero--ajtr h1 { font-size: 34px; } }
+
+.page-content { background: #ece6db; overflow-x: hidden; }
+.page-content__inner--article,
+.page-content__inner--article p { color: #1a1a1a; overflow-wrap: break-word; font-size: 24px; line-height: 40px; }
+.page-content__inner--article,
+.page-content__inner--article h2,
+.page-content__inner--article h3 { font-family: 'Autour One', sans-serif; }
+.page-content__subhead { color: #6b3a2c; font-weight: 400; }
+.page-content__inner--article a { color: #6b3a2c; }
+.page-content__inner--article a:hover, .page-content__inner--article a:focus { color: #a15038; }
+
+.page-content__diary {
+  background: #1a1a1a;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 28px 20px;
+}
+.page-content__diary-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 12px;
+  border-left: 4px solid #6b3a2c;
+}
+.page-content__diary p { color: #f2ede3; font-size: 24px; line-height: 40px; margin: 0 0 1em; }
+.page-content__diary p:last-child { margin-bottom: 0; }
+.page-content__diary a { color: #efd37d; }
+
+.page-content__copyright {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  opacity: 0.7;
+}
+.page-content__copyright a { color: inherit; text-decoration: underline; }

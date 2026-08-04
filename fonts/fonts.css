@@ -12,3 +12,24 @@
   font-display: swap;
   src: url("montserrat-900.woff2") format("woff2");
 }
+@font-face {
+  font-family: 'Cormorant Infant';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("cormorant-infant-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Cormorant Infant';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("cormorant-infant-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Autour One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("autour-one-400.woff2") format("woff2");
+}
