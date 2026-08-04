@@ -70,8 +70,20 @@ function initCarousel() {
   });
 }
 
+function initScrollToTop() {
+  var btn = document.querySelector('.scroll-to-top');
+  if (!btn) return;
+  btn.hidden = false;
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('is-visible', window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   initNav();
   initCarousel();
-  // scroll-to-top module attaches itself here (added in Task 7)
+  initScrollToTop();
 });

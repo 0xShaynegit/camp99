@@ -342,7 +342,32 @@ background-image: none !important;
   </div>
 </section>
 </main>
-<!-- FOOTER placeholder: Task 7 -->
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__contact">
+      <h3>contact</h3>
+      <p>Email&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;<a href="mailto:info@camp99.asia">info@camp99.asia</a></p>
+      <p>Phone Bob Bowling&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..082-192-1665</p>
+    </div>
+    <div class="site-footer__social">
+      <h3>keep in touch</h3>
+      <div class="social-icons">
+        <a class="social-icon" href="https://web.facebook.com/Camp99Camp99/" rel="noopener" target="_blank" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="site-footer__links">
+      <a href="https://www.paypal.me/DigitalMissionUS" rel="noopener" target="_blank">DONATE NOW with PAYPAL.</a>
+      <a href="https://Camp99.asia/tax-deductible-donations/">Tax Deductible Donations - Please Click HERE.</a>
+      <a href="https://Camp99.asia/disclaimer/">Disclaimer</a>
+    </div>
+    <p class="site-footer__copyright">Copyright &copy; 2026 Camp 99. All rights reserved.</p>
+  </div>
+  <button class="scroll-to-top" aria-label="Scroll to top" hidden>&#8593;</button>
+</footer>
 <script src="./scripts/main.js"></script>
 </body>
 </html>
