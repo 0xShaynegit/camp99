@@ -197,7 +197,21 @@ background-image: none !important;
   </div>
 </header>
 <main>
-<!-- HERO placeholder: Task 3 -->
+<section class="hero">
+  <img class="hero__bg" src="./images/camp99asia-camp99-asia-facility-212.webp"
+       srcset="./images/camp99asia-camp99-asia-facility-212.webp 1280w,
+               ./images/camp99asia-camp99-asia-facility-212-300w.webp 300w,
+               ./images/camp99asia-camp99-asia-facility-212-500w.webp 500w,
+               ./images/camp99asia-camp99-asia-facility-212-1024w.webp 1024w,
+               ./images/camp99asia-camp99-asia-facility-212-768w.webp 768w"
+       sizes="(max-width: 600px) 456px, (max-width: 1280px) 100vw, 1280px"
+       width="1280" height="720" fetchpriority="high" decoding="async" alt="Camp 99 asia camp99asia">
+  <div class="hero__content container">
+    <h1>Camp 99</h1>
+    <h2>Camp 99 is a day-use meeting, retreat, and recreation center for Christians.</h2>
+    <a class="hero__cta" href="https://web.facebook.com/Camp99Camp99/" rel="noopener" target="_blank">we have facebook &rarr;</a>
+  </div>
+</section>
 <!-- ABOUT placeholder: Task 4 -->
 <!-- SERVICES placeholder: Task 4 -->
 <!-- CAROUSEL/COME-ON-OUT placeholder: Task 5 -->
