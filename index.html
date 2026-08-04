@@ -6,11 +6,22 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VZ7EQZDMK6');
-    window.addEventListener('load', function(){
+    function loadGtagScript(){
+      if (window.__gtagScriptLoaded) return;
+      window.__gtagScriptLoaded = true;
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VZ7EQZDMK6';
       document.head.appendChild(s);
+      ['scroll','mousemove','touchstart','keydown','click'].forEach(function(evt){
+        window.removeEventListener(evt, loadGtagScript, {passive:true});
+      });
+    }
+    ['scroll','mousemove','touchstart','keydown','click'].forEach(function(evt){
+      window.addEventListener(evt, loadGtagScript, {passive:true});
+    });
+    window.addEventListener('load', function(){
+      setTimeout(loadGtagScript, 5000);
     });
   </script>
 
