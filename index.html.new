@@ -198,14 +198,13 @@ background-image: none !important;
 </header>
 <main>
 <section class="hero">
-  <img class="hero__bg" src="./images/camp99asia-camp99-asia-facility-212.webp"
-       srcset="./images/camp99asia-camp99-asia-facility-212.webp 1280w,
-               ./images/camp99asia-camp99-asia-facility-212-300w.webp 300w,
-               ./images/camp99asia-camp99-asia-facility-212-500w.webp 500w,
-               ./images/camp99asia-camp99-asia-facility-212-1024w.webp 1024w,
-               ./images/camp99asia-camp99-asia-facility-212-768w.webp 768w"
-       sizes="(max-width: 600px) 456px, (max-width: 1280px) 100vw, 1280px"
-       width="1280" height="720" fetchpriority="high" decoding="async" alt="Camp 99 asia camp99asia">
+  <img class="hero__bg" src="./images/camp99asia-camp99-asia-facility-240.webp"
+       srcset="./images/camp99asia-camp99-asia-facility-240.webp 1600w,
+               ./images/camp99asia-camp99-asia-facility-240-300w.webp 300w,
+               ./images/camp99asia-camp99-asia-facility-240-768w.webp 768w,
+               ./images/camp99asia-camp99-asia-facility-240-1280w.webp 1280w"
+       sizes="100vw"
+       width="1600" height="1111" fetchpriority="high" decoding="async" alt="Camp 99 asia camp99asia">
   <div class="hero__content container">
     <h1>Camp 99</h1>
     <h2>Camp 99 is a day-use meeting, retreat, and recreation center for Christians.</h2>
