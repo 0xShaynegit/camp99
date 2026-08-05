@@ -96,6 +96,9 @@ body { background: rgb(32, 87, 18); }
 .page-content a { color: #efd37d; }
 .page-content a:hover, .page-content a:focus { color: #f5e3a3; }
 
+/* --- Footer: slightly darker green tint on this page --- */
+.site-footer { background: rgb(20, 55, 12); }
+
 /* --- Photo captions --- */
 .eots-figure { margin: 24px auto; }
 .eots-figure .page-content__article-img { margin: 0 0 8px; display: block; }
