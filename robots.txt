@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://camp99.asia/sitemap.xml
+Sitemap: https://camp99.asia/sitemapv2.xml
