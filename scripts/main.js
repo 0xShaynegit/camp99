@@ -72,11 +72,65 @@ function initCarousel() {
     var item = track.querySelector('.carousel__item');
     return item ? item.getBoundingClientRect().width + 12 : 300;
   };
+  var handleScroll = function (direction) {
+    var maxScroll = track.scrollWidth - track.clientWidth;
+    var newScroll = track.scrollLeft + (direction === 'next' ? scrollAmount() : -scrollAmount());
+    if (newScroll <= 0) {
+      track.scrollLeft = maxScroll;
+    } else if (newScroll >= maxScroll) {
+      track.scrollLeft = 0;
+    } else {
+      track.scrollBy({ left: direction === 'next' ? scrollAmount() : -scrollAmount(), behavior: 'smooth' });
+    }
+  };
   prev.addEventListener('click', function () {
-    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    handleScroll('prev');
   });
   next.addEventListener('click', function () {
-    track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+    handleScroll('next');
+  });
+}
+
+function initLightbox() {
+  var lightboxHTML = '<div class="lightbox" hidden><div class="lightbox__overlay"></div><div class="lightbox__container"><button class="lightbox__close" aria-label="Close">✕</button><img class="lightbox__img" src="" alt=""><div class="lightbox__nav"><button class="lightbox__prev" aria-label="Previous">❮</button><button class="lightbox__next" aria-label="Next">❯</button></div></div></div>';
+  document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+  var lightbox = document.querySelector('.lightbox');
+  var img = lightbox.querySelector('.lightbox__img');
+  var closeBtn = lightbox.querySelector('.lightbox__close');
+  var prevBtn = lightbox.querySelector('.lightbox__prev');
+  var nextBtn = lightbox.querySelector('.lightbox__next');
+  var overlay = lightbox.querySelector('.lightbox__overlay');
+  var allCarouselItems = [];
+  var currentIndex = 0;
+  function openLightbox(index) {
+    currentIndex = index;
+    img.src = allCarouselItems[index].src;
+    img.alt = allCarouselItems[index].alt;
+    lightbox.hidden = false;
+  }
+  function closeLightbox() {
+    lightbox.hidden = true;
+  }
+  function navigateLightbox(direction) {
+    currentIndex = direction === 'next' ? (currentIndex + 1) % allCarouselItems.length : (currentIndex - 1 + allCarouselItems.length) % allCarouselItems.length;
+    openLightbox(currentIndex);
+  }
+  var carouselItems = document.querySelectorAll('.carousel__item');
+  carouselItems.forEach(function (item, i) {
+    allCarouselItems.push(item);
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', function () { openLightbox(i); });
+  });
+  closeBtn.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', function () { navigateLightbox('prev'); });
+  nextBtn.addEventListener('click', function () { navigateLightbox('next'); });
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.hidden) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox('prev');
+      if (e.key === 'ArrowRight') navigateLightbox('next');
+    }
   });
 }
 
@@ -122,5 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initStickyHeader();
   initNav();
   initCarousel();
+  initLightbox();
   initScrollToTop();
 });
