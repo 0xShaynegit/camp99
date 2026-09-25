@@ -70,7 +70,7 @@ a:hover, a:focus { color: var(--color-accent-hover); }
   z-index: 100;
   background: transparent;
   padding: 16px 0;
-  transition: background 0.3s;
+  transition: background 0.3s, padding 0.3s ease;
 }
 .site-header.is-scrolled { background: var(--color-bg); }
 .site-header__inner {
@@ -78,7 +78,7 @@ a:hover, a:focus { color: var(--color-accent-hover); }
   align-items: center;
   justify-content: space-between;
 }
-.site-logo img { width: 200px; height: auto; }
+.site-logo img { width: 200px; height: auto; transition: width 0.3s ease; }
 
 .nav-toggle {
   display: none;
@@ -207,7 +207,7 @@ a:hover, a:focus { color: var(--color-accent-hover); }
   align-items: start;
   margin-top: 24px;
 }
-.about__text p { margin-bottom: 1.3em; font-size: 32px; }
+.about__text p { margin-bottom: 1.3em; font-size: 32px; line-height: 31.2px; }
 .about__images img { border-radius: 4px; }
 
 .services { position: relative; padding: 60px 0; }
@@ -686,7 +686,7 @@ picture > source { display: none; }
 
 /* --- Front page additions --- */
 .about__quote { margin: 40px auto 0; max-width: 900px; text-align: center; }
-.about__quote p { font-size: 30px; font-style: italic; margin-bottom: 8px; }
+.about__quote p { font-size: 30px; line-height: 31.2px; font-style: italic; margin-bottom: 8px; }
 .about__quote cite { font-size: 22px; font-style: normal; letter-spacing: 0.06em; opacity: 0.85; }
 .services__intro { font-size: 30px; margin: 8px 0 0; }
 .carousel-section__note { max-width: 1000px; margin: 32px auto 0; text-align: center; font-size: 28px; line-height: 1.4; }
@@ -704,4 +704,12 @@ picture > source { display: none; }
   .ticker > * { animation: none; }
   .ticker > [aria-hidden="true"] { display: none; }
   .ticker { overflow-x: auto; }
+}
+
+/* --- Header shrink on scroll --- */
+.site-header.is-scrolled { padding: 6px 0; }
+.site-header.is-scrolled .site-logo img { width: 130px; }
+@media (min-width: 1025px) {
+  .site-nav__list a { transition: color 0.3s, font-size 0.3s ease, padding 0.3s ease; }
+  .site-header.is-scrolled .site-nav__list a { font-size: 24px; padding: 4px 0; }
 }
