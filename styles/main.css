@@ -710,6 +710,7 @@ picture > source { display: none; }
 .site-header.is-scrolled { padding: 6px 0; }
 .site-header.is-scrolled .site-logo img { width: 130px; }
 @media (min-width: 1025px) {
-  .site-nav__list a { transition: color 0.3s, font-size 0.3s ease, padding 0.3s ease; }
-  .site-header.is-scrolled .site-nav__list a { font-size: 24px; padding: 4px 0; }
+  .site-nav__list > li > a { transition: color 0.3s, font-size 0.3s ease, padding 0.3s ease; }
+  .site-header.is-scrolled .site-nav__list > li > a { font-size: 24px; padding: 4px 0; }
+  .sub-menu a { font-size: 26px; }
 }
