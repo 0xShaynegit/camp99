@@ -89,6 +89,54 @@ function initCarousel() {
   next.addEventListener('click', function () {
     handleScroll('next');
   });
+  var carousel = track.closest('.carousel');
+  if (carousel && carousel.hasAttribute('data-autoplay')) initCarouselAutoplay(carousel, track, prev, next);
+}
+
+function initCarouselAutoplay(carousel, track, prev, next) {
+  var items = Array.prototype.slice.call(track.querySelectorAll('.carousel__item'));
+  var timer = null;
+  var paused = false;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function current() {
+    var left = track.scrollLeft + 2;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].offsetLeft >= left) return i;
+    }
+    return items.length - 1;
+  }
+  function step(dir) {
+    var atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    var i = current();
+    var target;
+    if (dir === 'next') {
+      target = atEnd ? 0 : items[Math.min(i + 1, items.length - 1)].offsetLeft;
+    } else {
+      target = track.scrollLeft <= 2 ? track.scrollWidth : items[Math.max(i - 1, 0)].offsetLeft;
+    }
+    track.scrollTo({ left: target, behavior: 'smooth' });
+  }
+  function lightboxOpen() {
+    var lb = document.querySelector('.lightbox');
+    return lb && !lb.hidden;
+  }
+  function start() {
+    if (reduceMotion || timer) return;
+    timer = setInterval(function () {
+      if (!paused && !document.hidden && !lightboxOpen()) step('next');
+    }, 3500);
+  }
+  function pause() { paused = true; }
+  function resume() { paused = false; }
+  prev.addEventListener('click', function (e) { e.stopImmediatePropagation(); step('prev'); }, true);
+  next.addEventListener('click', function (e) { e.stopImmediatePropagation(); step('next'); }, true);
+  carousel.addEventListener('mouseenter', pause);
+  carousel.addEventListener('mouseleave', resume);
+  carousel.addEventListener('focusin', pause);
+  carousel.addEventListener('focusout', resume);
+  carousel.addEventListener('touchstart', pause, { passive: true });
+  carousel.addEventListener('touchend', function () { setTimeout(resume, 4000); }, { passive: true });
+  start();
 }
 
 function initLightbox() {
