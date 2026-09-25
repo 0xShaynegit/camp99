@@ -683,3 +683,25 @@ a:hover, a:focus { color: var(--color-accent-hover); }
 /* picture wrappers must not affect layout */
 picture { display: contents; }
 picture > source { display: none; }
+
+/* --- Front page additions --- */
+.about__quote { margin: 40px auto 0; max-width: 900px; text-align: center; }
+.about__quote p { font-size: 30px; font-style: italic; margin-bottom: 8px; }
+.about__quote cite { font-size: 22px; font-style: normal; letter-spacing: 0.06em; opacity: 0.85; }
+.services__intro { font-size: 30px; margin: 8px 0 0; }
+.carousel-section__note { max-width: 1000px; margin: 32px auto 0; text-align: center; font-size: 28px; line-height: 1.4; }
+
+/* --- Ticker band under the hero --- */
+.hero .ticker-band { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; }
+.ticker-band { background: rgba(0, 0, 0, 0.78); border-top: 1px solid rgba(197, 128, 201, 0.5); border-bottom: 1px solid rgba(197, 128, 201, 0.5); padding: 11px 0; }
+.ticker { display: flex; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.ticker > * { display: flex; flex: 0 0 auto; animation: ticker-scroll var(--ticker-duration, 60s) linear infinite; }
+.ticker__item { display: inline-flex; align-items: center; white-space: nowrap; font-size: 17px; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; }
+.ticker__item::after { content: ""; width: 5px; height: 5px; margin: 0 1.54rem; background: var(--color-accent); transform: rotate(45deg); }
+@keyframes ticker-scroll { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-100%, 0, 0); } }
+.ticker:hover > * { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .ticker > * { animation: none; }
+  .ticker > [aria-hidden="true"] { display: none; }
+  .ticker { overflow-x: auto; }
+}

@@ -182,6 +182,17 @@ function initLightbox() {
   });
 }
 
+function initTicker() {
+  document.querySelectorAll('[data-ticker]').forEach(function (el) {
+    var track = el.firstElementChild;
+    if (!track) return;
+    var clone = track.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    el.appendChild(clone);
+    el.style.setProperty('--ticker-duration', (parseFloat(el.dataset.ticker) || 60) + 's');
+  });
+}
+
 function initScrollToTop() {
   var btn = document.querySelector('.scroll-to-top');
   if (!btn) return;
@@ -225,5 +236,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initNav();
   initCarousel();
   initLightbox();
+  initTicker();
   initScrollToTop();
 });
