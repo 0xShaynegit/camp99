@@ -224,6 +224,7 @@ a:hover, a:focus { color: var(--color-accent-hover); }
   margin-top: 24px;
   align-items: stretch;
 }
+.service-card { flex: 0 0 calc((100% - 48px) / 3); }
 .service-card {
   text-align: center;
   background: rgba(0, 0, 0, 0.55);
